@@ -11,6 +11,10 @@ service sbinqseecomd /sbin/qseecomd
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
 
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
 on init
     mkdir /vendor/firmware
     mkdir /vendor/firmware/keymaster
