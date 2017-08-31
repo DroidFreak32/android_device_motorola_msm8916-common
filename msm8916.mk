@@ -88,7 +88,7 @@ PRODUCT_PACKAGES += \
     libbson \
     libc_util \
     libshims_camera \
-    Snap
+    libshim_atomic
 
 # Display
 PRODUCT_PACKAGES += \
