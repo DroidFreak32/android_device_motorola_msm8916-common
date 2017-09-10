@@ -90,6 +90,12 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     libshim_atomic
 
+# Camera properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1 \
+    media.stagefright.legacyencoder=true \
+    media.stagefright.less-secure=true
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
