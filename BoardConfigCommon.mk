@@ -35,6 +35,7 @@ TARGET_NO_BOOTLOADER := true
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 vmalloc=400M androidboot.bootdevice=7824900.sdhci movablecore=160M androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000
@@ -65,3 +66,4 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_SCREEN_BLANK_ON_BOOT := true
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+TW_USE_TOOLBOX := true
